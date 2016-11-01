@@ -1,9 +1,7 @@
-<div class="header">
 	<h2>Create Payroll Data</h2><br>
-</div>
 
-<%= simple_form_for(@payroll, url: {action: "create"}) do |f| %>
-<%= f.error_notification %>
+	<%= simple_form_for(@payroll, url: {action: "create"}) do |f| %>
+	<%= f.error_notification %>
 
 <div class="form-inputs">
 	<%= f.input :custname, required: true, autofocus: true, label: "Customer Name" %>
@@ -15,6 +13,11 @@
 
 <div class="form-actions">
 	<%=f.button :submit, "Save" %>
+	<br>
 </div>
 
-<% end -%>
+	<% end -%>
+
+
+
+

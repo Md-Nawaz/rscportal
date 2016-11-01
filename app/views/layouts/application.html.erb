@@ -4,18 +4,18 @@
   <title>Rsc</title>
   <%= csrf_meta_tags %>
 
-  <!-- <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %> -->
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-  <%= stylesheet_link_tag "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css" %>
-  <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js" %>
+ <!--  <%= stylesheet_link_tag "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css" %>
+  <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js" %> -->
 
 </head>
 
 <body>
   <nav>
     <div class="nav-wrapper">
-      <h4 class="brand-logo"> RSC Portal</h4>
+      <%= link_to 'RSC portal', root_path, class: "brand-logo" %>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <% if dealer_signed_in? -%>
         <li><%= link_to 'Home', root_path %></li>
@@ -42,5 +42,16 @@
       <%= yield %>
     </div>
   </div>
+
+  <style type="text/css">
+    nav {
+      background-color: #9b59b6; 
+    }
+
+    .brand-logo {
+      margin-left: 3em;
+    } 
+
+  </style>
 </body>
 </html>

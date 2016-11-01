@@ -1,0 +1,29 @@
+	<h2>Create New Contract</h2><br>
+
+	<%= simple_form_for(@contract, url: {action: "create"},html: {multipart: true}) do |f| %>
+	<%= f.error_notification %>
+
+	<div class="form-inputs">
+		<%= f.input :title, required: true, autofocus: true, label: "Title" %>
+		<%= f.input :ownername, required: true, autofocus: true, label: "Owner Name" %>
+		<%= f.input :nameofretail, required: true, autofocus: true, label: "Name Of Retail" %>
+		<%= f.input :addofretail, required: true, autofocus: true, label: "Address of Retail" %>
+		<%= f.input :contactno, required: true, autofocus: true, label: "Contact No" %>
+		<%= f.input :emailid, required: true, autofocus: true, label: "Email id" %>
+		<%= f.simple_fields_for :contract do |p| %>
+		<%= p.input :adproof, as: :file %>
+		<%= p.input :iproof, as: :file %>
+		<% end %>
+	</div>
+
+	<div class="form-actions">
+		<br>
+		<%=f.button :submit, "Save" %>
+		<br>
+	</div>
+
+	<% end -%>
+
+
+
+

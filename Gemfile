@@ -15,9 +15,12 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'simple_form'
 gem 'devise'
-
+gem 'mini_magick'
 gem 'bootstrap-sass'
 
+gem 'materialize-sass'
+
+gem 'carrierwave'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 

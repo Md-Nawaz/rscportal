@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
  
 
+  # get 'contract/index'
+
+  # get 'contract/show'
+
+  # get 'contract/new'
+
+  # get 'contract/create'
+  resources :contract
   get 'portal/home'
   get 'portal/dealers', to: 'portal#dealers'
 
