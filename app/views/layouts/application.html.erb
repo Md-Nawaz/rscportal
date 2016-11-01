@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rsc</title>
+  <%= csrf_meta_tags %>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <div class="navbar-brand">
+          <b>Online Portal</b>
+        </div>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <% if dealer_signed_in? -%>
+          <li><%= link_to 'Home', root_path %></li>
+          <li><%= link_to 'Account', edit_dealer_registration_path %></li>
+          <li><%= link_to 'Sign out', destroy_dealer_session_path, :method => :delete %></li>
+          <li><%= link_to 'Add retailer' %></li>
+        </ul>
+        <% else -%>
+        <ul class="nav navbar-nav pull-right">
+          <li><%= link_to 'Home', root_path %></li>
+          <li><%= link_to 'Dealer login', new_dealer_session_path %></li>
+          <li><%= link_to 'OEM login', '#' %></li>
+        </ul>
+        <% end -%>
+      </nav>
+    </nav>
+
+    <div id="main_content" class="container">
+      <% flash.each do |name, msg| %>
+      <%= content_tag(:div, msg, class: "alert alert-info") %>
+      <% end %>
+
+      <div id="content" class="col-md-9 center-block">
+        <%= yield %>
+      </div>
+    </div>
+  </body>
+  </html>

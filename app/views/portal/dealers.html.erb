@@ -1,0 +1,12 @@
+<% if dealer_signed_in? %>
+<h2>Welcome <%= current_dealer.name %></h2>
+<% else %>
+Please log in to continue
+<% end -%>
+
+	<ul class="nav navbar-right">
+		<li><a href='#'>Add a sub dealer</a></li>
+		<li><a href='#'>Create Payroll</a></li>
+		<li><a href='#'></a></li>
+	</ul>
+</div>
