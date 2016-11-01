@@ -1,0 +1,20 @@
+<table>
+    <thead>
+        <th>Customer Name</th>
+        <th>Manufacturer</th>
+        <th>Product ID</th>
+        <th>Selling Price</th>
+        <th>Date of Sale</th>
+    </thead>
+    <tbody>
+        <% @payroll.each do |payroll| %>
+        <tr>
+            <td><%= payroll.custname %></td>
+            <td><%= payroll.manufacturer %></td>
+            <td><%= payroll.prodid %></td>
+            <td><%= payroll.price %></td>
+            <td><%= payroll.dateofsale %></td>
+        </tr>
+        <% end %>
+    </tbody>
+</table>
