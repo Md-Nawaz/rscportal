@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
  
 
+  devise_for :oems
   # get 'contract/index'
 
   # get 'contract/show'

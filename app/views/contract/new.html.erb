@@ -11,20 +11,18 @@
 		<%= f.input :contactno, required: true, autofocus: true, label: "Contact No" %>
 		<%= f.input :emailid, required: true, autofocus: true, label: "Email id" %>
 		<div>
-			<%= f.input :image, as: :file %><br>
-			<%= f.input :iproof, as: :file %>
+			<%= f.input :image, as: :file , label: "Address Proof" %><br>
+			<%= f.input :iproof, as: :file, label: "Identity Proof" %>
 		</div>
 	</div>
 	<div class="wrapper">
-		<div align="left">
-			<br><br>
-			<%= link_to 'back', portal_dealers_path, class: "waves-effect waves-light btn" %>
-		</div>
+
 		
 		<div class="form-actions" align="center">
 			<br>
-			<%=f.button :submit, "Save" %><br><br>
+			<%=f.button :submit, "Save", class: "btn btn-primary" %><br><br>
 		</div>
+			<%= link_to 'back', portal_dealers_path, class: "waves-effect waves-light btn" %>
 	</div>
 
 

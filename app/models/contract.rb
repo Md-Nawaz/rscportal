@@ -11,7 +11,5 @@ class Contract < ApplicationRecord
 	mount_uploader :image, ImageUploader
 	mount_uploader :iproof, IproofUploader
 
-
-
 end
  
