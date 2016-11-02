@@ -1,20 +1,22 @@
+
+
 	<h2>Create Payroll Data</h2><br>
 
 	<%= simple_form_for(@payroll, url: {action: "create"}) do |f| %>
 	<%= f.error_notification %>
 
-<div class="form-inputs">
-	<%= f.input :custname, required: true, autofocus: true, label: "Customer Name" %>
-	<%= f.input :manufacturer, required: true, autofocus: true %>
-	<%= f.input :prodid, required: true, autofocus: true, label: "Product Id" %>
-	<%= f.input :price, required: true, autofocus: true, label: "Selling Price" %>
-	<%= f.input :dateofsale, required: true, autofocus: true, label: "Date Of Sale" %>
-</div>
+	<div class="form-inputs">
+		<%= f.input :custname, required: true, autofocus: true, label: "Customer Name" %>
+		<%= f.input :manufacturer, required: true, autofocus: true %>
+		<%= f.input :prodid, required: true, autofocus: true, label: "Product Id" %>
+		<%= f.input :price, required: true, autofocus: true, label: "Selling Price" %>
+		<%= f.input :dateofsale, required: true, autofocus: true, label: "Date Of Sale" %><br><br>
+	</div>
 
-<div class="form-actions">
-	<%=f.button :submit, "Save" %>
-	<br>
-</div>
+	<div class="form-actions">
+		<%=f.button :submit, "Save" %>
+		<br>
+	</div>
 
 	<% end -%>
 

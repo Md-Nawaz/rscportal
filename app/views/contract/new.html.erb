@@ -10,19 +10,27 @@
 		<%= f.input :addofretail, required: true, autofocus: true, label: "Address of Retail" %>
 		<%= f.input :contactno, required: true, autofocus: true, label: "Contact No" %>
 		<%= f.input :emailid, required: true, autofocus: true, label: "Email id" %>
-		<%= f.simple_fields_for :contract do |p| %>
-		<%= p.input :adproof, as: :file %>
-		<%= p.input :iproof, as: :file %>
-		<% end %>
+		<div>
+			<%= f.input :image, as: :file %><br>
+			<%= f.input :iproof, as: :file %>
+		</div>
+	</div>
+	<div class="wrapper">
+		<div align="left">
+			<br><br>
+			<%= link_to 'back', portal_dealers_path, class: "waves-effect waves-light btn" %>
+		</div>
+		
+		<div class="form-actions" align="center">
+			<br>
+			<%=f.button :submit, "Save" %><br><br>
+		</div>
 	</div>
 
-	<div class="form-actions">
-		<br>
-		<%=f.button :submit, "Save" %>
-		<br>
-	</div>
+
 
 	<% end -%>
+
 
 
 

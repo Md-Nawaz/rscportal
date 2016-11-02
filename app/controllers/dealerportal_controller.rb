@@ -9,7 +9,8 @@ class DealerportalController < ApplicationController
 	def create
 		@payroll = Payroll.new(pay_params)
 		if @payroll.save
-				redirect_to portal_dealers_path, notice: "Payroll Created"
+				flash[:success] = "Payroll Created"
+				redirect_to portal_dealers_path
 			else
 				render "new"
 		end

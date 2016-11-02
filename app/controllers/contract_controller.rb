@@ -26,7 +26,7 @@ class ContractController < ApplicationController
 	private
 
 	def con_params
-		allow = [:title, :ownername, :nameofretail, :addofretail, :contactno, :emailid, :adproof, :iproof]
+		allow = [:title, :ownername, :nameofretail, :addofretail, :contactno, :emailid, :image, :iproof]
 		params.require(:contract).permit(allow)
 	end
 end

@@ -10,19 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161101134047) do
+ActiveRecord::Schema.define(version: 20161102060402) do
 
   create_table "contracts", force: :cascade do |t|
     t.string   "title"
     t.string   "ownername"
     t.string   "nameofretail"
     t.string   "addofretail"
-    t.string   "adproof"
-    t.string   "iproof"
-    t.bigint   "contactno"
+    t.integer  "contactno",    limit: 8
     t.string   "emailid"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.string   "image"
+    t.string   "iproof"
   end
 
   create_table "dealers", force: :cascade do |t|
