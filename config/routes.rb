@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
  
 
+  # get 'oemmain/index'
+
+  # get 'oemmain/new'
+
+  # get 'oemmain/create'
+
+  # get 'oemmain/show'
+  devise_for :dealers
   devise_for :oems
   # get 'contract/index'
 
@@ -9,12 +17,15 @@ Rails.application.routes.draw do
   # get 'contract/new'
 
   # get 'contract/create'
-  resources :contract
+   get 'oemmain/payrolldetail', to: 'oemmain#payrolldetail'
   get 'portal/home'
   get 'portal/dealers', to: 'portal#dealers'
+  get 'portal/oems', to: 'portal#oems'
 
-  devise_for :dealers
+
   resources :dealerportal
+  resources :contract
+  resources :oemmain
 
 
 

@@ -7,4 +7,5 @@ class Dealer < ApplicationRecord
 
 
          has_many :contract
+         has_many :payroll
 end

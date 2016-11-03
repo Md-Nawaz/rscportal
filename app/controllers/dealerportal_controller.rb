@@ -5,7 +5,7 @@ class DealerportalController < ApplicationController
 	def new
 		@payroll = Payroll.new
 	end
-
+ 
 	def create
 		@payroll = Payroll.new(pay_params)
 		if @payroll.save

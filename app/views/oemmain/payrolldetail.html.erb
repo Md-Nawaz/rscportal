@@ -1,4 +1,4 @@
-
+<% if oem_signed_in? %>
 <table class="table table-bordered">
     <thead>
         <th>Customer Name</th>
@@ -16,6 +16,7 @@
             <td><%= payroll.price %></td>
             <td><%= payroll.dateofsale %></td>
         </tr>
-        <% end -%>
+        <% end %>
     </tbody>
 </table>
+<% end -%>

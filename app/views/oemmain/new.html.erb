@@ -1,0 +1,23 @@
+	<h2>Create Forward Logistics Data</h2><br>
+
+	<%= simple_form_for(@forwardlogistic, url: {action: "create"}) do |f| %>
+	<%= f.error_notification %>
+
+	<div class="form-inputs">
+		<%= f.input :oemcode, required: true, autofocus: true, label: "OEM code" %>
+		<%= f.input :factorycode, required: true, autofocus: true, label: "Factory code" %>
+		<%= f.input :batchcode, required: true, autofocus: true, label: "Batch code" %>
+		<%= f.input :noofunits, required: true, autofocus: true, label: "No Of Units" %>
+		<%= f.input :prodid, required: true, autofocus: true, label: "Product Id" %>
+		<%= f.input :dealerid, required: true, autofocus: true, label: "Dealer Id" %>
+		<%= f.input :dateofship, required: true, autofocus: true, label: "Date Of Shipping" %><br><br>
+		<%= f.input :deliverydate, required: true, autofocus: true, label: "Delivery date to the dealer" %>
+	</div>
+
+	<div class="form-actions">
+		<%=f.button :submit, "Save" %>
+		<br>
+	</div>
+
+<% end -%>
+

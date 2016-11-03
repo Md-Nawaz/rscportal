@@ -1,0 +1,13 @@
+<% if oem_signed_in? %>
+<h2>Welcome <%= current_oem.name %></h2>
+<% else %>
+Please log in to continue
+<% end -%>
+<div align="left">
+	<ul class="nav">
+		<li><%= link_to 'Create Forward Logistics Data', new_oemmain_path %></li>
+		<li><%= link_to 'View Contract by Dealers',oemmain_payrolldetail_path %></li>
+		<li><%= link_to 'New Contract Request','#' %></li>
+		<li><%= link_to 'New Product', '#' %></li>
+	</ul>
+</div>

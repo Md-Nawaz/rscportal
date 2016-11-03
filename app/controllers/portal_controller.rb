@@ -9,5 +9,8 @@ class PortalController < ApplicationController
   	
   end
 
+  def oems
+  end
+
 
 end
